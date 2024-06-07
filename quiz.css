@@ -1,0 +1,115 @@
+
+/* default rul set declaration */
+:root{
+    --outlineColor: grey;
+    --bdrColor: grey;
+    --txtColor: black;
+    --qTxtColor: black;
+
+    --btnBdrColor: rgb(15, 123, 238);
+    --btnTxtColor: rgb(15, 123, 238);
+    --btnBgColor: rgb(15, 123, 238);
+    --quizBtnBgColor: white;
+}
+/* universal seector */
+*{
+    margin: 10px;
+}
+/* body */
+
+body{
+    display: flex;
+    justify-content: center;
+    background-color: red;
+}
+
+/* main container */
+.container{
+    background-color: white;
+    display: inline;
+    justify-content: center;
+    text-align: center;
+    width: 700px;
+    border: 5px solid var(--outlineColor);
+}
+
+/* container 2 */
+.container-2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* timer border */
+
+.timerBorder{
+    width: 50px;
+    border: 3px solid var(--btnBdrColor);
+    border-radius: 50% ;
+}
+h1{
+    color: var(--btnBgColor);
+}
+
+span{
+    font-size: x-large;
+}
+
+/* css for heading and question */
+
+.Questions{
+    border: 3px solid rgb(140, 140, 9);
+    padding: 10px;
+    border-radius: 10px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* serial no quiz style */
+#progress{
+    display: inline;
+    justify-content: center;
+    text-align: center;
+    border: 2px solid black;
+    background-color: green;
+    color: white;
+    border-radius: 49.9%;
+    padding: 15px;
+    position: relative;
+    top: 15px;
+}
+/* quiz answer button style */
+.quizBtn{
+    
+    border: 3px solid var(--btnBdrColor);
+    background-color: var(--quizBtnBgColor);
+    color: var(--btnBdrColor);
+    border-radius: 30px;
+    height: 50px;
+    width: 200px;
+    cursor: pointer;
+
+}
+
+/* hover action */
+.quizBtn:hover{
+    background-color: var(--btnBdrColor);
+    color: white;
+    cursor: pointer;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* next button style */
+#nextBtn{
+    border: 3px solid var(--btnBdrColor);
+    background-color: var(--btnBdrColor);
+    color: white;
+    border-radius: 30px;
+    height: 40px;
+    width: 150px;
+}

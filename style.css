@@ -1,0 +1,79 @@
+/* default rule set */
+:root{
+    --outlineColor: grey;
+    --bdrColor: grey;
+    --txtColor: black;
+    --qTxtColor: black;
+
+    --btnBdrColor: rgb(15, 123, 238);
+    --btnTxtColor: rgb(15, 123, 238);
+    --btnBgColor: rgb(15, 123, 238);
+    --catBgColor: rgba(115, 220, 228, 0.374);
+}
+
+/* universal selector */
+*{
+    margin: 10px;
+}
+
+/* body */
+body{
+    display: flex;
+    justify-content: center;
+}
+
+/* main container */
+.container{
+    background-color: white;
+    border: 5px solid grey;
+    justify-content: center; 
+    align-items: center; 
+    text-align: center;
+    width: 700px;
+}
+h1{
+    color: rgb(15, 123, 238);
+}
+
+/* input and enter button style */
+#name{
+    height: 30px;
+    width: 290px;
+    border: 3px solid grey;
+    border-radius: 5px;
+    background-color: var(--borderColor);
+    
+}
+#Enter{
+    background-color: var(--btnBgColor);
+    color: white;
+    height: 35px;
+    width: 100px;
+    border-radius: 5px;
+}
+
+/* 2nd section */
+.quiz-subjects{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.quiz-subjects div{
+    
+    border: 3px solid var(--btnBdrColor);
+    background-color: var(--catBgColor);
+    color: white;
+    border-radius: 5px;
+    height: 45px;
+    width: 200px;
+    text-decoration: none;
+    padding-top: 20px;
+    
+
+}
+
+/* hover style */
+h3:hover{
+    background-color: var(--btnBdrColor);
+    color: white;
+}

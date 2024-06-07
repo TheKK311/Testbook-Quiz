@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="quizresult.css">
+    <title>Quiz Result</title>
+
+    <style>
+        :root{
+    --outlineColor: grey;
+    --bdrColor: grey;
+    --txtColor: black;
+    --qTxtColor: black;
+
+    --btnBdrColor: rgb(15, 123, 238);
+    --btnTxtColor: rgb(15, 123, 238);
+    --btnBgColor: rgb(15, 123, 238);
+}
+
+*{
+    margin: 10px;
+}
+
+body{
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+}
+.container{
+    background-color: white;
+    
+    text-align: center;
+    align-items: center;
+    width: 700px;
+    border: 5px solid black;
+}
+h1{
+    color: var(--btnBgColor);
+}
+
+span{
+    font-size: x-large;
+    
+    
+}
+.exam{
+    display: flex;
+    flex-wrap: wrap;
+}
+.exam div{
+    
+    border: 3px solid var(--btnBdrColor);
+    border-radius: 30px;
+    height: 50px;
+    width: 200px;
+
+}
+
+.exam div:hover{
+    background-color: var(--btnBdrColor);
+    color: white;
+}
+
+a{
+    text-decoration: none;
+}
+
+.exam{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.exam div{
+    
+    border: 3px solid var(--btnBdrColor);
+    background-color: var(--btnBgColor);
+    color: white;
+    border-radius: 30px;
+    height: 30px;
+    width: 150px;
+    padding-top: 10px;
+    cursor: pointer;
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        
+        <div id="vvvvv">
+            <h3>Quiz Result:</h3><!-- Changed from p to h3 for consistency -->
+        </div>
+        <hr>
+        <div class="fullname">
+            <p>Dear <span id="namedisplay">user</span>!</p>
+        </div>
+        <div class="totalno">
+            <p>Total Time Taken: <span id="totalTime">0 seconds</span></p>
+        </div>
+        <div class="TotalQuestion">
+            <p>Total Questions: <span id="totalQuestions">0</span></p>
+        </div>
+        <div class="attempt">
+            <p>Total Attempted: <span id="attemptedQuestions">0</span></p>
+        </div>
+        
+        <div class="pass-fail">
+            <p>Pass/Fail: <span id="passFail"></span></p>
+        </div>
+        <div class="correct">
+            <p>Correct Answers: <span id="correctAnswers">0</span></p>
+        </div>
+        <div class="wrong">
+            <p>Wrong Answers: <span id="wrongAnswers">0</span></p>
+        </div>
+        <div class="precentage">
+            <p>Percentage: <span id="percentage">0%</span></p>
+        </div>
+        <hr>
+        <div class="exam">
+            <div><a href="quiz1.html">Start Again</a></div>
+            <div><a href="index.html" onclick="myHome()">Go to Home</a></div>
+        </div>
+    </div>
+    <script>
+        const name = localStorage.getItem('name');
+        if (name) {
+            document.getElementById('namedisplay').textContent = name;
+        }
+    </script>
+
+    <script src="result.js"></script>
+</body>
+</html>

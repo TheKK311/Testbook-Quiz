@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="quiz.css">
+    <title>Document</title>
+
+    <!-- external css link -->
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body bgcolor="pinkyellow">
+
+<!-- main container start here -->
+<div class="container">
+    <div>
+        
+        <div>
+            <!-- logo of the brand -->
+            <img src="testbook.jpeg" alt="Testbook Logo"> 
+        </div>
+
+        <div>
+            <h1 id="namep">Hello User!</h1>
+        </div>
+        <div>
+            <h4>Enter your name to continue the Quiz</h4>
+        </div>
+
+        <div>
+            <!-- input area -->
+            <form id="form">
+                <input type="text" name="name" id="name" placeholder="ENTER YOUR NAME.">
+                <button type="submit" id="Enter">ENTER</button>
+
+                
+            </form>
+        </div>
+        <div>
+            <!-- timing declaration -->
+        <p>You will have 30 seconds to answer each Questions.</p>
+        </div>
+    </div>
+    <hr>
+    <div class="category">
+        <div>
+            <h1>Select Category</h1>
+        </div>
+        
+        <div class="quiz-subjects">
+
+            <!-- all quiz category -->
+            <div><a href="quiz1.html">GK</a></div>
+            <div><a href="quiz2.html">Maths</a></div> 
+                            <br>
+            <div><a href="quiz3.html">Chemistry</a></div>
+            <div><a href="quiz4.html">State & City</a></div>
+        </div>          
+    </div>
+
+</div>
+
+<!-- Internal javascript below -->
+<script>
+    document.getElementById("Enter").addEventListener("click", function(){
+            var enter = document.getElementById("name").value;
+        document.getElementById("namep").innerHTML="Hello " +enter+ "!";
+
+    });
+
+
+     form = document.getElementById("form");
+        form.addEventListener("submit", function(event) {
+            event.preventDefault();
+            var inputText = document.getElementById("name").value;
+            document.getElementById("namep").textContent ="Hello " +inputText+ "!";
+            //return false;
+        });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+
+    <!-- external css link -->
+    <link rel="stylesheet" href="quiz.css">
+    </style>
+</head>
+<body>
+    <!-- main container -->
+
+    <div class="container"> 
+        <div>
+            <!-- subject of the quiz -->
+            <h1>GK</h1>
+        </div>
+        <hr>
+        <div class="container-2">
+            <div class="timerBorder">
+                <!-- timing display -->
+            <h3 id="timer">30</h3>
+            </div>
+        <div>
+            <!-- score display -->
+            <h3>SCORE: <span id="score">0</span></h3>
+        </div>
+    </div>
+    <!-- Question serial Position -->
+    <div id="progress"><h3>01/10</h3></div>
+    <div class="Questions">
+
+        <!-- question displayer heading -->
+        <h2 id="h2question">Who is the PM of India?</h2>
+    </div>
+
+    <div>
+        <!-- option button -->
+        <button class="quizBtn" onclick="checkAnswer(this)">Narendra Modi</button>
+        <button class="quizBtn" onclick="checkAnswer(this)">Arvind Modi</button>
+        <br>
+        <button class="quizBtn" onclick="checkAnswer(this)">Rahul Modi</button>
+        <button class="quizBtn" onclick="checkAnswer(this)">Manoj Modi</button>
+        <br>
+        
+    </div>
+
+
+    <!-- button for next question -->
+    <button id="nextBtn" onclick="nextQuestion()">Next Question</button>
+
+    <!-- external script adding below -->
+    <script src="quiz1.js"></script>
+</body>
+</html>
